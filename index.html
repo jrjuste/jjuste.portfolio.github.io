@@ -15,8 +15,24 @@
     header {
       background: #2c3e50;
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 1rem;
       text-align: center;
+      position: relative;
+    }
+    .logo-bar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 1rem;
+    }
+    .logo-bar img {
+      height: 32px;
+      filter: brightness(0) invert(1); /* makes logos discrete white-on-dark */
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+    }
+    .logo-bar img:hover {
+      opacity: 1;
     }
     header h1 {
       margin: 0;
@@ -48,11 +64,6 @@
     ul li {
       margin-bottom: 0.5rem;
     }
-    .logo {
-      height: 18px;
-      vertical-align: middle;
-      margin-right: 6px;
-    }
     footer {
       text-align: center;
       padding: 1rem;
@@ -64,29 +75,35 @@
 </head>
 <body>
   <header>
+    <div class="logo-bar">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon AWS">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+      <img src="https://www.qualtrics.com/m/assets/images/qualtrics-logo.svg" alt="Qualtrics">
+    </div>
     <h1>My Portfolio</h1>
     <p>Professional Projects in Python, REDCap, AWS, and more</p>
   </header>
 
   <section>
     <div class="project">
-      <h2><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/REDCap_logo.png" alt="REDCap" class="logo"> REDCap PDF Generator</h2>
+      <h2>REDCap PDF Generator</h2>
       <p>Custom HTML templates used to generate reports, documents, and forms.</p>
       <ul>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="logo"> Built in Python integrated with REDCap</li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Amazon-Simple-Queue-Service-Logo.svg" alt="Amazon SQS" class="logo"> Utilized Amazon SQS for messaging and automated generation</li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="logo"> Hosted on Linux for reliability and performance</li>
+        <li>Built in Python integrated with REDCap</li>
+        <li>Utilized Amazon SQS for messaging and automated generation</li>
+        <li>Hosted on Linux for reliability and performance</li>
         <li>Requires minimal maintenance</li>
       </ul>
     </div>
 
     <div class="project">
-      <h2><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/REDCap_logo.png" alt="REDCap" class="logo"> REDCap Email Notification Service</h2>
+      <h2>REDCap Email Notification Service</h2>
       <p>Versatile service for distributing project survey links.</p>
       <ul>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="logo"> Developed in Python for automation</li>
+        <li>Developed in Python for automation</li>
         <li>Seamless integration with REDCap workflows</li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="logo"> Linux-based hosting for stability</li>
+        <li>Linux-based hosting for stability</li>
         <li>Enhanced messaging for participants with survey link distribution</li>
       </ul>
     </div>
@@ -96,20 +113,20 @@
       <p>A research method that collects real-time data on participants’ feelings, behaviors, and experiences in natural settings, often using smartphones to prompt brief surveys throughout the day.</p>
       <ul>
         <li>Designed surveys using Qualtrics</li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Amazon-S3-Logo.svg" alt="Amazon S3" class="logo"> Leveraged Amazon S3 for secure data storage</li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Amazon-Simple-Queue-Service-Logo.svg" alt="Amazon SQS" class="logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/AWS_Lambda_logo.svg" alt="AWS Lambda" class="logo"> Implemented SQS and Lambda for event-driven processing</li>
+        <li>Leveraged Amazon S3 for secure data storage</li>
+        <li>Implemented SQS and Lambda for event-driven processing</li>
         <li>Integrated Twilio for SMS-based participant engagement</li>
       </ul>
     </div>
 
     <div class="project">
-      <h2><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/REDCap_logo.png" alt="REDCap" class="logo"> REDCap Developer Certification Training</h2>
+      <h2>REDCap Developer Certification Training</h2>
       <p>Interactive training program for project certification.</p>
       <ul>
         <li>Created training modules in REDCap</li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="logo"> Developed supporting scripts in Python</li>
+        <li>Developed supporting scripts in Python</li>
         <li>Delivered presentations with PowerPoint</li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Amazon-Simple-Queue-Service-Logo.svg" alt="Amazon SQS" class="logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="logo"> Utilized Amazon SQS and Linux hosting for scalability</li>
+        <li>Utilized Amazon SQS and Linux hosting for scalability</li>
         <li>Leveraged PDF generation service for participant certificates</li>
       </ul>
     </div>

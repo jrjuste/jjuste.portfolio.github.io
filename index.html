@@ -19,38 +19,59 @@
 		<main class="container">
 			<section class="hero">
 				<div>
-					<h1>Hi — I build delightful web experiences.</h1>
-					<p>Front-end developer focused on clean interfaces, performance, and accessible UX.</p>
+					<h1>Hi — I build reliable data integrations and research tooling.</h1>
+					<p>Back-end and integration work for research platforms — Python, queues, and serverless pipelines.</p>
 					<p style="margin-top:18px"><a class="btn" href="#projects">View projects</a></p>
 				</div>
-				<aside>
-					<div class="card">
-						<h3>Highlighted project</h3>
-						<p>Small description goes here — one or two lines.</p>
-					</div>
-				</aside>
 			</section>
 
 			<section id="projects" class="grid" aria-label="Projects">
 				<article class="card project">
-					<h3>Project: Portfolio Site</h3>
-					<p>A personal portfolio site showcasing work and writing. Built with semantic HTML, responsive CSS, and minimal JavaScript.</p>
-					<p><strong>Tech:</strong> HTML • CSS • JavaScript</p>
-					<p><a href="#" class="btn">View live</a> <a href="#" class="link">Source</a></p>
+					<h3>REDCap PDF Generator</h3>
+					<p>Automated PDF generation pipeline for REDCap records, producing publication-ready reports.</p>
+					<ul>
+						<li>Role: Designed and implemented the PDF generation service in Python.</li>
+						<li>Integration: Consumes REDCap data and enqueues tasks via Amazon SQS for worker processing.</li>
+						<li>Hosting: Deployed on Linux servers with worker processes and monitoring.</li>
+						<li>Practical: Templates support conditional logic, multi-page layouts, and optimized PDF size for emailing/storage.</li>
+					</ul>
+					<p><strong>Tech:</strong> Python • REDCap • Amazon SQS • Linux</p>
 				</article>
 
 				<article class="card project">
-					<h3>Project: UI Component Library</h3>
-					<p>Reusable UI components for consistent design and accessibility across projects. Includes buttons, forms, and layout primitives.</p>
-					<p><strong>Tech:</strong> HTML • CSS (BEM) • Storybook</p>
-					<p><a href="#" class="btn">Demo</a> <a href="#" class="link">Source</a></p>
+					<h3>REDCap Email Notification Service</h3>
+					<p>Event-driven email service to send notifications from REDCap workflows.</p>
+					<ul>
+						<li>Role: Implemented templating, queueing, and delivery logic in Python.</li>
+						<li>Integration: Listens for REDCap webhooks and uses SQS to decouple processing.</li>
+						<li>Hosting: Hosted on Linux with supervisors, logging, and retry/backoff strategies.</li>
+						<li>Practical: Idempotency and audit logging ensure reliable message delivery.</li>
+					</ul>
+					<p><strong>Tech:</strong> Python • REDCap • Amazon SQS • Linux • SMTP/ESP</p>
 				</article>
 
 				<article class="card project">
-					<h3>Project: Performance Audit</h3>
-					<p>Performance and accessibility audit for a client site with prioritized fixes and measurable improvements.</p>
-					<p><strong>Tech:</strong> Lighthouse • Web Vitals • Chrome DevTools</p>
-					<p><a href="#" class="btn">Read report</a></p>
+					<h3>Ecological Momentary Assessment (EMA)</h3>
+					<p>Realtime EMA pipeline leveraging Qualtrics for surveys and cloud services for processing and messaging.</p>
+					<ul>
+						<li>Role: Architected survey triggers, storage, and SMS scheduling.</li>
+						<li>Integration: Qualtrics for surveys; S3 for media/storage; SQS + Lambda for async processing.</li>
+						<li>Messaging: Twilio for SMS delivery with callback handling.</li>
+						<li>Practical: Low-latency delivery, retryable tasks, and secure retention policies for study data.</li>
+					</ul>
+					<p><strong>Tech:</strong> Qualtrics • Amazon S3 • Amazon SQS • AWS Lambda • Twilio</p>
+				</article>
+
+				<article class="card project">
+					<h3>REDCap Developer Certification Training</h3>
+					<p>Training and certification workflow for REDCap developers with automated assessment and certification issuance.</p>
+					<ul>
+						<li>Role: Built course content, assessment scripts, and certification automation.</li>
+						<li>Integration: Course delivered in REDCap; Python scripts evaluate submissions and queue certification events.</li>
+						<li>Hosting: Materials and evaluation scripts run on Linux; SQS coordinates background grading tasks.</li>
+						<li>Practical: Automated scoring, certificate generation, and enrollment notifications reduced admin overhead.</li>
+					</ul>
+					<p><strong>Tech:</strong> REDCap • Python • PowerPoint • Amazon SQS • Linux</p>
 				</article>
 			</section>
 		</main>
